@@ -88,11 +88,12 @@ const selectedRelease = ref(null)
   <ReleaseTable :release-group-ids="musicBrainzIds" @selected="id=>selectedRelease=id"/>
 </template>
 
-<style>
+<style scoped>
 .collage {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .collage li {
@@ -110,21 +111,18 @@ const selectedRelease = ref(null)
 }
 
 dialog {
-  min-width: 90dvw;
+  max-width: 45rem;
+  width: 90dvw;
   min-height: 90dvh;
   height: 90dvh;
   overflow: hidden;
   padding: 0;
   z-index: 1;
-  box-shadow: 0 0 2rem black;
+  box-shadow: 0 0 4rem black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
 }
 
-dialog::backdrop {
-  background-color: black;
-  opacity: 0.5;
-}
 </style>

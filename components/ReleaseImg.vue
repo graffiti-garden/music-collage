@@ -1,11 +1,12 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, toRefs } from 'vue'
 
 const props = defineProps(['mbid'])
+const { mbid } = toRefs(props)
 const loaded = ref(false)
 const error = ref(false)
 
-watch(props.mbid, ()=> {
+watch(mbid, ()=> {
   loaded.value = false
   error.value = false
 })
@@ -13,9 +14,9 @@ watch(props.mbid, ()=> {
 
 <template>
   <img
-    v-if="props.mbid"
+    v-if="mbid"
     v-show="loaded"
-    :src="`https://coverartarchive.org/release-group/${props.mbid}/front-250`"
+    :src="`https://coverartarchive.org/release-group/${mbid}/front-250`"
     @load="()=> loaded=true"
     @error="()=> error=true">
   <img v-if="!loaded&&!error" src="../media/spinner.gif">

@@ -46,7 +46,8 @@ table, th, td {
 table {
   border-collapse: collapse;
   display: block;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 table thead, table tbody tr {
