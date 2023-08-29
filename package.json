@@ -1,0 +1,16 @@
+{
+  "name": "@graffiti-garden/music-collage",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.3",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "@graffiti-garden/plugin-vue": "^1.0.2",
+    "vue3-click-away": "^1.2.4"
+  }
+}
