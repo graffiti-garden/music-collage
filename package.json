@@ -10,7 +10,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "@graffiti-garden/plugin-vue": "^1.0.2",
+    "@graffiti-garden/plugin-vue": "^1.0.4",
     "vue3-click-away": "^1.2.4"
   }
 }
